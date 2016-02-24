@@ -3,13 +3,13 @@
   Module      <%= @input_module %>
   <%- if @input_query -%>
   Query       <%= @input_query %>
-  <%- end %>
+  <%- end -%>
   <%- if @input_execs -%>
-    <%- @input_execs.each do |exec| %>
-  Exec        <%= "#{exec};" -%>
+    <%- @input_execs.each do |exec| -%>
+  Exec        <%= "#{exec};" %>
     <%- end -%>
-  <%- end %>
+  <%- end -%>
   <%- if @input_file_path -%>
   File        <%= "'#{@input_file_path}'" %>
-  <%- end %>
+  <%- end -%>
 </Input>

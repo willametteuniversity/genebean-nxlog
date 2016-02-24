@@ -10,9 +10,12 @@
   Port        <%= @output_port %>
   <%- end -%>
   <%- if @output_execs -%>
-    <%- @output_execs.each do |exec| %>
-  Exec        <%= "#{exec};" -%>
+    <%- @output_execs.each do |exec| -%>
+  Exec        <%= "#{exec};" %>
     <%- end -%>
-  <%- end %>
-<% [*@output_options].each do |output_option| -%><%="  #{output_option}" %>
-<% end %></Output>
+  <%- end -%>
+  <%- if @output_options -%>
+    <%- [*@output_options].each do |output_option| -%><%="  #{output_option}" %>
+    <%- end -%>
+  <%- end -%>
+</Output>
